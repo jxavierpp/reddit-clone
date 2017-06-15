@@ -78,12 +78,16 @@
             @endif
 
             <div class="content">
+                @foreach ($elements as element):
+                  @element
+                @endforeach
+
                 <div class="title m-b-md">
-                    
                     @if( is_null($nombre))
                         no tengo a quien saludar! :(
                     @else
                         Hola {{ $nombre }}!
+                    @endif
                 </div>
 
                 <div class="links">
